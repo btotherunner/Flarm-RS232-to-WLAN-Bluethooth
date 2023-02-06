@@ -12,6 +12,10 @@ Flarm-RS232       MAX3232       WEMOSD1Mini
     TX             -> tx            d6 (gpio12)
     GND             (-)             GND  
     3V              (+)             5V
+    
+Baut einen SoftAP auf - und hört auf die IP 192.168.4.1
+Port für Flarm Daten sind 4353
+    
 */
 SoftwareSerial softSerial(12, 13);
 String inputString = "";
