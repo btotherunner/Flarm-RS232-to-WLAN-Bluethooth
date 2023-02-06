@@ -1,3 +1,14 @@
+/*
+Flarm-RS232       MAX3232       WEMOSD1Mini
+    RX             <- rx            d7 (gpio13)
+    TX             -> tx            d6 (gpio12)
+    GND             (-)             GND  
+    3V              (+)             5V
+    
+Die IP wird nach dem Verbinden mit dem WLAN in der Software Console angezeigt
+Port für Flarm Daten sind 4353
+*/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiServer.h>
