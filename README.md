@@ -14,8 +14,8 @@
 ### Flarm to Bluetooth
 | Flarm-RS232  | MAX3232 | HC-05 | 
 | ------------- | ------------- | ------------- | 
-| RX  | <- rx   |  tx | 
-| TX  | -> tx    |  rx | 
+| RX  | <- rx   |  RX | 
+| TX  | -> tx    |  TX | 
 | GND  | (-)   |  GND  | 
 | 3V  | (+)   |  VCC | 
 
