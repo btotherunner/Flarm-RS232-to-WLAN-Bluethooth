@@ -2,7 +2,8 @@
 
 
 ## Wiremap
-    
+
+### Flarm to WLAN
 | Flarm-RS232  | MAX3232 | WEMOSD1Mini | 
 | ------------- | ------------- | ------------- | 
 | RX  | <- rx   |  d7 (gpio13) | 
@@ -10,12 +11,15 @@
 | GND  | (-)   |  GND  | 
 | 3V  | (+)   |  5V | 
 
+### Flarm to Bluetooth
 | Flarm-RS232  | MAX3232 | HC-05 | 
 | ------------- | ------------- | ------------- | 
 | RX  | <- rx   |  tx | 
 | TX  | -> tx    |  rx | 
 | GND  | (-)   |  GND  | 
 | 3V  | (+)   |  VCC | 
+
+Es ist auch möglich den Wemos D1 Mini & HC05 parallel zum MAX3232 anzuschließen.
 
 ## Hardware Links
 
