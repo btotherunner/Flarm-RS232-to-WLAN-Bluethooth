@@ -1,4 +1,4 @@
-# FLARM Data to WLAN/BT
+# FLARM Data to WLAN/Bluetooth
 
 
 ## Wiremap
