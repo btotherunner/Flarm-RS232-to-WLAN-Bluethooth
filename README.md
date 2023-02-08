@@ -31,3 +31,6 @@ Es ist auch möglich den Wemos D1 Mini & HC05 parallel zum MAX3232 anzuschließe
 | HC-05 Bluetooth | [Amazon](https://www.amazon.de/TECNOIOT-Integrated-Bluetooth-Module-Wireless/dp/B07J66PR6B/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=300KGJBAL216B&keywords=hc-05&qid=1675753023&sprefix=hc-05%2Caps%2C113&sr=8-4) |  ~17 Euro (2 Stück) | 8,5 Euro |
 
 Kosten pro Flarm to WLAN Dongle etwa 6-15 Euro
+
+
+![Platine](https://github.com/btotherunner/Flarm-RS232-to-WLAN-Bluethooth/blob/main/Platine/rsr2323-1.PNG?raw=true)
