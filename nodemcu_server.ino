@@ -26,13 +26,13 @@ WiFiServer server(4353);
 
 void setup() {
   Serial.begin(115200);
-
+  pinMode(LED_BUILTIN, OUTPUT);
   softSerial.begin(19200);
 
   WiFi.softAP(ssid, password);
   IPAddress ip = WiFi.softAPIP();
 
-  Serial.print("AP IP address: ");
+  Serial.println("AP IP address: ");
   Serial.println(ip);
   server.begin();
 }
@@ -41,16 +41,31 @@ void loop() {
   WiFiClient client = server.available();
   if (!client) {
     return;
+    Serial.print("No Client connected...");
+    delay(200);
   }
 
   while (client.connected()) {
+    
+    if (client.available()) {
+      // Read XCSoar Data and send it to SoftwareSerial (TX)
+      String nmea = client.readStringUntil('\n');
+      Serial.println(nmea);
+      digitalWrite(LED_BUILTIN, HIGH);
+      softSerial.println(nmea);
+      digitalWrite(LED_BUILTIN, LOW);
+      }
 
+    // Read Data from Software Serial and send Data to WifiClient (RX)
     if (softSerial.available() > 0) {
       incomingByte = softSerial.read();
       inputString += incomingByte;
+      digitalWrite(LED_BUILTIN, LOW);
       if (incomingByte == '\n') {
+        digitalWrite(LED_BUILTIN, HIGH);
         // Der komplette String wurde empfangen
         // Verarbeiten Sie inputString hier
+        
         Serial.print(inputString);
         client.print(inputString);
         inputString = "";
